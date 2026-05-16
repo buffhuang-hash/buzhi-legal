@@ -62,25 +62,21 @@
   <tr>
     <th>数据类型</th>
     <th>用途</th>
-    <th>存储位置</th>
     <th>留存期限</th>
   </tr>
   <tr>
-    <td>网站 Cookie / LocalStorage</td>
-    <td>维持您在各 AI 网站的登录状态</td>
-    <td>WKWebsiteDataStore 独立分区</td>
+    <td>网站登录状态</td>
+    <td>维持您在各 AI 网站的登录状态（各网站互相隔离）</td>
     <td>应用卸载或清除缓存时删除</td>
   </tr>
   <tr>
     <td>自定义 AI 列表 / 排序 / 隐藏偏好</td>
     <td>保存您对 AI 列表的个性化设置</td>
-    <td>UserDefaults</td>
     <td>应用卸载时删除</td>
   </tr>
   <tr>
     <td>应用偏好设置</td>
     <td>保存您的应用使用偏好</td>
-    <td>UserDefaults</td>
     <td>应用卸载时删除</td>
   </tr>
 </table>
@@ -88,7 +84,7 @@
 <p>以上所有数据均不会离开您的设备，卸载本应用后即被系统自动清除。</p>
 
 <h2>3. 第三方服务</h2>
-<p>本应用通过内嵌浏览器（WKWebView）加载以下第三方 AI 网页服务。当您使用这些服务时，您与各 AI 网站的交互受各网站自身隐私政策约束：</p>
+<p>本应用通过内嵌浏览器加载以下第三方 AI 网页服务。当您使用这些服务时，您与各 AI 网站的交互受各网站自身隐私政策约束：</p>
 
 <table>
   <tr>
@@ -174,7 +170,7 @@
 <h2>6. 数据安全保护措施</h2>
 <p>我们采取以下措施保护您的数据安全：</p>
 <ul>
-  <li><strong>本地隔离存储</strong>：各 AI 服务的登录态存储在独立的 WKWebsiteDataStore 分区中，互不可访问，防止跨站 Cookie 泄露</li>
+  <li><strong>本地隔离存储</strong>：各 AI 服务的登录状态互相隔离存储，互不可访问，防止跨站数据泄露</li>
   <li><strong>无远程上传</strong>：本应用不包含任何数据上传、远程上报或后台同步机制</li>
   <li><strong>系统级保护</strong>：依赖 iOS 系统的沙盒机制和数据加密保护</li>
   <li><strong>最小权限原则</strong>：仅在使用相应功能时请求必要权限</li>

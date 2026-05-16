@@ -10,73 +10,204 @@
   body { font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; padding: 2rem 1rem; max-width: 720px; margin: 0 auto; }
   h1 { color: var(--primary); font-size: 1.6rem; margin-bottom: 0.5rem; }
   h2 { color: var(--primary); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem; border-bottom: 2px solid var(--primary); padding-bottom: 4px; }
+  h3 { color: var(--primary); font-size: 1.05rem; margin-top: 1.2rem; margin-bottom: 0.3rem; }
   p, li { margin-bottom: 0.6rem; }
   ul { padding-left: 1.5rem; }
-  .updated { color: #888; font-size: 0.9rem; margin-bottom: 1.5rem; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.6rem 0.8rem; text-align: left; }
+  th { background: var(--primary); color: white; }
+  tr:nth-child(even) { background: #f9f7f0; }
+  .updated { color: #888; font-size: 0.9rem; margin-bottom: 0.3rem; }
+  .version { color: #aaa; font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .highlight { background: #fff3cd; padding: 0.8rem 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #ffc107; }
   .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; font-size: 0.85rem; color: #999; }
 </style>
 </head>
 <body>
 
 <h1>步知 隐私政策</h1>
-<p class="updated">最后更新：2026 年 5 月 17 日</p>
+<p class="updated">生效日期：2026 年 5 月 17 日</p>
+<p class="version">版本：v2.0</p>
 
-<p>「步知」（以下简称"本应用"）由独立开发者开发运营。本应用尊重并保护所有用户的个人隐私。本隐私政策说明本应用在信息处理方面的实践。</p>
+<p>「步知」（BuZhi，以下简称"本应用"）由独立开发者（以下简称"我们"）开发运营。我们深知个人信息对您的重要性，并将按照法律法规的规定，保护您的个人信息及隐私安全。</p>
 
-<h2>1. 数据收集</h2>
-<p>本应用<strong>不收集、不存储、不传输</strong>任何个人身份信息至开发者或第三方服务器。具体而言：</p>
+<p>本隐私政策适用于本应用的所有功能和服务。请您在使用本应用前，仔细阅读并充分理解本政策。</p>
+
+<div class="highlight">
+  <strong>核心承诺：</strong>本应用<strong>不收集、不存储、不传输</strong>任何个人身份信息至开发者或第三方服务器。本应用不接入任何分析、统计或广告追踪 SDK。所有数据仅保存在您的设备本地。
+</div>
+
+<h2>1. 开发者信息</h2>
+<p>本应用开发者：buffhuang（独立开发者）</p>
+<p>联系邮箱：buffhhhuang@gmail.com</p>
+<p>问题反馈：<a href="https://github.com/buffhuang-hash/topiclens-mvp/issues">GitHub Issues</a></p>
+
+<h2>2. 个人信息处理情况</h2>
+
+<h3>2.1 我们不收集的个人信息</h3>
+<p>本应用不收集以下任何类型的个人信息：</p>
 <ul>
   <li>不收集用户姓名、邮箱、电话等身份信息</li>
-  <li>不收集设备标识符（IDFA / IDFV）</li>
+  <li>不收集设备标识符（IDFA / IDFV / UDID）</li>
   <li>不收集地理位置信息</li>
-  <li>不接入任何分析、统计或广告追踪 SDK</li>
+  <li>不收集 IP 地址</li>
+  <li>不收集浏览记录或搜索历史</li>
+  <li>不收集任何用户行为数据或使用统计</li>
 </ul>
 
-<h2>2. 本地数据存储</h2>
-<p>以下数据仅存储在您的设备本地（App 沙盒内），不会上传至任何服务器：</p>
-<ul>
-  <li><strong>网站 Cookie / LocalStorage</strong>：各 AI 网站的登录态保存在独立的 WKWebsiteDataStore 分区中，用于维持您在各网站的登录状态</li>
-  <li><strong>自定义 AI 列表 / 排序 / 隐藏偏好</strong>：保存在 UserDefaults 中</li>
-  <li><strong>应用偏好设置</strong>：保存在 UserDefaults 中</li>
-</ul>
-<p>这些数据不会离开您的设备，卸载本应用后即被清除。</p>
+<h3>2.2 本地处理的设备数据</h3>
+<p>以下数据仅存储在您的设备本地（iOS 应用沙盒内），<strong>不会上传至任何服务器</strong>：</p>
+
+<table>
+  <tr>
+    <th>数据类型</th>
+    <th>用途</th>
+    <th>存储位置</th>
+    <th>留存期限</th>
+  </tr>
+  <tr>
+    <td>网站 Cookie / LocalStorage</td>
+    <td>维持您在各 AI 网站的登录状态</td>
+    <td>WKWebsiteDataStore 独立分区</td>
+    <td>应用卸载或清除缓存时删除</td>
+  </tr>
+  <tr>
+    <td>自定义 AI 列表 / 排序 / 隐藏偏好</td>
+    <td>保存您对 AI 列表的个性化设置</td>
+    <td>UserDefaults</td>
+    <td>应用卸载时删除</td>
+  </tr>
+  <tr>
+    <td>应用偏好设置</td>
+    <td>保存您的应用使用偏好</td>
+    <td>UserDefaults</td>
+    <td>应用卸载时删除</td>
+  </tr>
+</table>
+
+<p>以上所有数据均不会离开您的设备，卸载本应用后即被系统自动清除。</p>
 
 <h2>3. 第三方服务</h2>
-<p>本应用通过内嵌浏览器（WKWebView）加载第三方 AI 网页服务（如 Kimi、豆包、ChatGPT 等）。当您使用这些服务时：</p>
+<p>本应用通过内嵌浏览器（WKWebView）加载以下第三方 AI 网页服务。当您使用这些服务时，您与各 AI 网站的交互受各网站自身隐私政策约束：</p>
+
+<table>
+  <tr>
+    <th>服务名称</th>
+    <th>类型</th>
+    <th>数据收集</th>
+  </tr>
+  <tr>
+    <td>Kimi（月之暗面）</td>
+    <td>AI 对话</td>
+    <td>受 Kimi 隐私政策约束</td>
+  </tr>
+  <tr>
+    <td>豆包（字节跳动）</td>
+    <td>AI 对话</td>
+    <td>受豆包隐私政策约束</td>
+  </tr>
+  <tr>
+    <td>通义千问（阿里巴巴）</td>
+    <td>AI 对话</td>
+    <td>受通义千问隐私政策约束</td>
+  </tr>
+  <tr>
+    <td>文心一言（百度）</td>
+    <td>AI 对话</td>
+    <td>受文心一言隐私政策约束</td>
+  </tr>
+  <tr>
+    <td>智谱清言（智谱 AI）</td>
+    <td>AI 对话</td>
+    <td>受智谱清言隐私政策约束</td>
+  </tr>
+  <tr>
+    <td>ChatGPT / Claude / Gemini / Perplexity / Poe 等</td>
+    <td>AI 对话（海外）</td>
+    <td>受各服务隐私政策约束</td>
+  </tr>
+</table>
+
+<p><strong>重要说明：</strong></p>
 <ul>
-  <li>您与各 AI 网站的交互受各网站自身隐私政策约束</li>
-  <li>本应用不对各 AI 网站的数据处理行为负责</li>
-  <li>建议您阅读各 AI 网站的隐私政策</li>
+  <li>本应用仅作为浏览器容器加载上述网页，<strong>不拦截、不读取、不存储</strong>您与各 AI 服务之间的对话内容</li>
+  <li>本应用不对各 AI 网站的数据处理行为承担任何责任</li>
+  <li>建议您在使用前阅读各 AI 网站的隐私政策</li>
+  <li>如您不同意某 AI 服务的隐私政策，可选择不在本应用中使用该服务</li>
 </ul>
 
-<h2>4. 网络通信</h2>
-<p>本应用的网络活动仅限于：</p>
+<h2>4. 跨境个人信息提供</h2>
+<p>本应用本身不向境外传输任何个人信息。但当您使用海外 AI 服务（如 ChatGPT、Claude、Gemini 等）时，您的对话数据将由对应服务提供商传输至境外服务器处理，此过程受该服务提供商的隐私政策及相关法律管辖。请您知悉并自行评估风险。</p>
+
+<h2>5. 权限使用说明</h2>
+<p>本应用可能请求以下设备权限。所有权限请求均由您在使用 AI 网页时主动触发，非必要权限不会在后台自动请求：</p>
+
+<table>
+  <tr>
+    <th>权限</th>
+    <th>使用场景</th>
+    <th>是否必须</th>
+    <th>拒绝影响</th>
+  </tr>
+  <tr>
+    <td>相机</td>
+    <td>在 AI 网页上传照片或扫码</td>
+    <td>否</td>
+    <td>无法使用拍照/扫码功能，其他功能不受影响</td>
+  </tr>
+  <tr>
+    <td>相册（照片库）</td>
+    <td>在 AI 网页上传图片</td>
+    <td>否</td>
+    <td>无法上传图片，其他功能不受影响</td>
+  </tr>
+  <tr>
+    <td>麦克风</td>
+    <td>在 AI 网页进行语音输入</td>
+    <td>否</td>
+    <td>无法使用语音输入，其他功能不受影响</td>
+  </tr>
+</table>
+
+<p>所有权限均为可选，拒绝任何权限均不影响本应用核心功能的正常使用。</p>
+
+<h2>6. 数据安全保护措施</h2>
+<p>我们采取以下措施保护您的数据安全：</p>
 <ul>
-  <li>加载您选择的 AI 网页内容（WKWebView 标准浏览器行为）</li>
-  <li>无任何后台网络请求或数据上报</li>
+  <li><strong>本地隔离存储</strong>：各 AI 服务的登录态存储在独立的 WKWebsiteDataStore 分区中，互不可访问，防止跨站 Cookie 泄露</li>
+  <li><strong>无远程上传</strong>：本应用不包含任何数据上传、远程上报或后台同步机制</li>
+  <li><strong>系统级保护</strong>：依赖 iOS 系统的沙盒机制和数据加密保护</li>
+  <li><strong>最小权限原则</strong>：仅在使用相应功能时请求必要权限</li>
 </ul>
 
-<h2>5. 权限使用</h2>
-<p>本应用可能请求以下权限，均由您主动在使用 AI 网页时触发：</p>
+<h2>7. 您的权利</h2>
+<p>根据相关法律法规，您对您的个人信息享有以下权利：</p>
 <ul>
-  <li><strong>相机</strong>：用于在 AI 网页上传照片或扫码</li>
-  <li><strong>相册</strong>：用于在 AI 网页上传图片</li>
-  <li><strong>麦克风</strong>：用于在 AI 网页进行语音输入</li>
+  <li><strong>访问权</strong>：您可随时通过「我的 → 管理 AI」查看和访问您的自定义设置</li>
+  <li><strong>更正权</strong>：您可随时修改您的自定义 AI 列表和偏好设置</li>
+  <li><strong>删除权</strong>：您可通过「我的 → 清除缓存」删除本地缓存的网页数据；卸载本应用将删除所有本地数据</li>
+  <li><strong>数据可携权</strong>：由于本应用不收集任何个人信息至服务器，无需进行数据导出</li>
+  <li><strong>撤回同意权</strong>：您可随时在 iOS「设置 → 步知」中关闭已授予的权限</li>
 </ul>
-<p>所有权限均为可选，拒绝权限不影响本应用其他功能的正常使用。</p>
 
-<h2>6. 儿童隐私</h2>
-<p>本应用不面向 13 岁以下儿童，亦不有意收集儿童个人信息。</p>
+<h2>8. 未成年人保护</h2>
+<p>本应用不面向 14 周岁以下未成年人，也不会有意收集未成年人的个人信息。如果您是未成年人的监护人，请您关注未成年人使用本应用时访问的第三方 AI 服务，并引导其阅读对应服务的隐私政策。如我们发现无意中收集了未成年人的个人信息，将立即删除相关数据。</p>
 
-<h2>7. 隐私政策变更</h2>
-<p>如本隐私政策发生变更，我们会在此页面上更新修订日期。继续使用本应用即表示您同意修订后的隐私政策。</p>
-
-<h2>8. 联系我们</h2>
-<p>如您对本隐私政策有任何疑问，请通过以下方式联系：</p>
+<h2>9. 隐私政策更新</h2>
+<p>我们可能会不时更新本隐私政策。更新时，我们将：</p>
 <ul>
-  <li>GitHub Issues：<a href="https://github.com/buffhuang-hash/topiclens-mvp/issues">https://github.com/buffhuang-hash/topiclens-mvp/issues</a></li>
+  <li>在此页面上更新修订日期和版本号</li>
+  <li>如政策发生重大变更，将通过应用内提示或其他合理方式通知您</li>
+  <li>继续使用更新后的本应用即表示您同意修订后的隐私政策</li>
+</ul>
+
+<h2>10. 联系我们</h2>
+<p>如您对本隐私政策有任何疑问、意见或建议，请通过以下方式联系我们：</p>
+<ul>
   <li>电子邮箱：buffhhhuang@gmail.com</li>
+  <li>问题反馈：<a href="https://github.com/buffhuang-hash/topiclens-mvp/issues">GitHub Issues</a></li>
 </ul>
+<p>我们将在收到您的反馈后 15 个工作日内予以回复。</p>
 
 <div class="footer">
   <p>© 2026 步知 BuZhi. All rights reserved.</p>

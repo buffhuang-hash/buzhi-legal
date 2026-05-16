@@ -3,63 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>步知 — 支持</title>
+<title>步知 — 帮助与支持</title>
 <style>
   :root { --primary: #1E2761; --accent: #F96167; --text: #333; --bg: #F5F2E8; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; padding: 2rem 1rem; max-width: 720px; margin: 0 auto; }
   h1 { color: var(--primary); font-size: 1.6rem; margin-bottom: 0.5rem; }
   h2 { color: var(--primary); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem; border-bottom: 2px solid var(--primary); padding-bottom: 4px; }
+  h3 { color: var(--primary); font-size: 1.05rem; margin-top: 1.2rem; margin-bottom: 0.3rem; }
   p, li { margin-bottom: 0.6rem; }
-  ul { padding-left: 1.5rem; }
+  ul, ol { padding-left: 1.5rem; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .card { background: white; border-radius: 12px; padding: 1.2rem 1.5rem; margin: 1rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
   .card h3 { color: var(--primary); margin-bottom: 0.3rem; }
+  .step { background: white; border-radius: 12px; padding: 1rem 1.5rem; margin: 0.6rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid var(--accent); }
+  .step .num { display: inline-block; background: var(--accent); color: white; width: 1.5rem; height: 1.5rem; border-radius: 50%; text-align: center; line-height: 1.5rem; font-size: 0.85rem; margin-right: 0.5rem; }
+  .notice { background: #fff3cd; padding: 0.8rem 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #ffc107; }
   .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; font-size: 0.85rem; color: #999; }
 </style>
 </head>
 <body>
 
-<h1>步知 支持</h1>
+<h1>步知 帮助与支持</h1>
 
 <h2>常见问题</h2>
 
 <div class="card">
-  <h3>为什么某些 AI 无法加载？</h3>
-  <p>部分海外 AI（ChatGPT / Claude / Gemini / Perplexity / Poe）需要系统级代理才能访问。请在 iOS「设置 → 通用 → VPN与设备管理」中配置代理后重试。</p>
+  <h3>🔍 为什么某些 AI 无法加载？</h3>
+  <p>部分海外 AI（ChatGPT / Claude / Gemini / Perplexity / Poe）需要系统级代理才能访问。请在 iOS「设置 → 通用 → VPN 与设备管理」中配置代理后重试。国内 AI（Kimi、豆包、通义千问等）无需代理即可正常使用。</p>
 </div>
 
 <div class="card">
-  <h3>登录状态会丢失吗？</h3>
+  <h3>🔐 登录状态会丢失吗？</h3>
   <p>步知为每个 AI 使用独立的 Cookie 分区，只要不清除缓存，登录状态会一直保持。iOS 16 上部分分区功能有降级，但同一域名下的 Cookie 仍独立隔离。</p>
 </div>
 
 <div class="card">
-  <h3>步知会收集我的数据吗？</h3>
-  <p>不会。步知是完全本地运行的应用，不接入任何分析、统计或远程上报 SDK。所有数据仅保存在您的设备上。详见<a href="privacy.html">隐私政策</a>。</p>
+  <h3>🛡️ 步知会收集我的数据吗？</h3>
+  <p>不会。步知是完全本地运行的应用，不接入任何分析、统计或远程上报 SDK。所有数据仅保存在您的设备上。详见 <a href="privacy.html">隐私政策</a>。</p>
 </div>
 
 <div class="card">
-  <h3>如何添加自定义 AI？</h3>
+  <h3>➕ 如何添加自定义 AI？</h3>
   <p>在「我的 → 管理 AI」页面，点击右上角「+」按钮，输入 AI 名称和网址即可添加。</p>
 </div>
 
 <div class="card">
-  <h3>如何排序或隐藏 AI？</h3>
+  <h3>🔄 如何排序或隐藏 AI？</h3>
   <p>在「管理 AI」页面，长按并拖动即可排序；点击眼睛图标可隐藏不常用的 AI。</p>
 </div>
 
+<div class="card">
+  <h3>🌐 为什么网页显示不完整？</h3>
+  <p>部分 AI 网站使用了本应用 WebView 不完全支持的特性。您可以尝试下拉刷新页面，或确认您的网络连接是否正常。</p>
+</div>
+
+<h2>数据管理</h2>
+
+<h3>🗑️ 删除数据</h3>
+<p>您可以随时删除本应用中的数据：</p>
+
+<div class="step">
+  <span class="num">1</span> 清除缓存：在「我的」页面点击「清除缓存」，可删除所有 AI 网页的缓存数据（登录状态会同步清除）
+</div>
+<div class="step">
+  <span class="num">2</span> 卸载应用：长按应用图标选择「移除 App」→「删除 App」，将删除所有本地数据（包括登录状态、自定义列表、偏好设置等）
+</div>
+
+<div class="notice">
+  <strong>请注意：</strong>由于步知不收集任何个人信息至远程服务器，卸载应用即可彻底删除所有数据，无需额外申请。卸载后数据无法恢复。
+</div>
+
+<h3>📋 管理权限</h3>
+<p>您可以随时在 iOS「设置 → 步知」中管理或关闭已授予的权限（相机、相册、麦克风），关闭后对应功能将不可用，但不影响其他功能。</p>
+
 <h2>联系方式</h2>
+<p>如您在使用中遇到任何问题，或有功能建议，欢迎通过以下方式联系我们：</p>
 <ul>
-  <li><strong>问题反馈</strong>：<a href="https://github.com/buffhuang-hash/topiclens-mvp/issues">GitHub Issues</a></li>
-  <li><strong>电子邮箱</strong>：buffhhhuang@gmail.com</li>
+  <li><strong>问题反馈</strong>：<a href="https://github.com/buffhuang-hash/topiclens-mvp/issues">GitHub Issues</a>（推荐，响应更快）</li>
+  <li><strong>电子邮箱</strong>：<a href="mailto:buffhhhuang@gmail.com">buffhhhuang@gmail.com</a></li>
 </ul>
+<p>我们将在收到反馈后 15 个工作日内予以回复。</p>
 
 <h2>相关链接</h2>
 <ul>
-  <li><a href="privacy.html">隐私政策</a></li>
-  <li><a href="https://github.com/buffhuang-hash/topiclens-mvp">GitHub 仓库</a></li>
+  <li><a href="privacy.html">📋 隐私政策</a></li>
+  <li><a href="https://github.com/buffhuang-hash/topiclens-mvp">⭐ GitHub 仓库</a></li>
 </ul>
 
 <div class="footer">
